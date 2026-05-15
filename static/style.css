@@ -5,9 +5,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 50%, #0f1a2e 100%);
     font-family: 'Georgia', 'Garamond', serif;
-    color: #f0f0f0;
+    color: #e8e8e8;
     min-height: 100vh;
     padding: 20px;
 }
@@ -15,36 +15,37 @@ body {
 h1 {
     font-size: 48px;
     margin: 30px 0;
-    color: #d4af37;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
+    color: #c9a961;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7), 0 0 20px rgba(201, 169, 97, 0.3);
+    letter-spacing: 3px;
     font-weight: bold;
+    text-align: center;
 }
 
 h2 {
-    color: #d4af37;
+    color: #c9a961;
     margin-bottom: 20px;
     font-size: 28px;
 }
 
-/* Форма ввода имён */
+/* Vārdu ievades forma */
 #nameForm {
-    background: rgba(20, 30, 60, 0.9);
+    background: rgba(10, 15, 35, 0.95);
     padding: 40px;
     border-radius: 15px;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a961;
     max-width: 500px;
     margin: 50px auto;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.8), inset 0 1px 0 rgba(201, 169, 97, 0.2);
 }
 
 input[type="text"] {
     width: 100%;
     padding: 15px;
     margin: 10px 0;
-    border: 2px solid #d4af37;
+    border: 2px solid #c9a961;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(245, 245, 240, 0.98);
     color: #1a1a2e;
     font-size: 16px;
     font-family: 'Georgia', serif;
@@ -53,8 +54,10 @@ input[type="text"] {
 
 input[type="text"]:focus {
     outline: none;
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    border-color: #e0c68d;
+    box-shadow: 0 0 20px rgba(201, 169, 97, 0.6), inset 0 0 10px rgba(201, 169, 97, 0.1);
     transform: scale(1.02);
+    background: rgba(255, 255, 250, 1);
 }
 
 input[type="text"]::placeholder {
@@ -62,36 +65,37 @@ input[type="text"]::placeholder {
 }
 
 canvas {
-    background: linear-gradient(to bottom, #00aa55, #008844);
-    border: 3px solid #d4af37;
+    background: linear-gradient(135deg, #1a5c3a 0%, #0d4620 50%, #082d16 100%);
+    border: 3px solid #c9a961;
     border-radius: 10px;
     display: block;
     margin: 30px auto;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 25px rgba(201, 169, 97, 0.2);
 }
 
-/* Кнопки */
+/* Pogas */
 button {
     padding: 15px 35px;
     font-size: 18px;
     font-family: 'Georgia', serif;
     cursor: pointer;
     margin: 15px;
-    border: 2px solid #d4af37;
-    background: linear-gradient(135deg, #d4af37 0%, #aa8c23 100%);
-    color: #1a1a2e;
+    border: 2px solid #c9a961;
+    background: linear-gradient(135deg, #c9a961 0%, #a88f4f 100%);
+    color: #0a0a0f;
     border-radius: 8px;
     font-weight: bold;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.4);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
-    background: linear-gradient(135deg, #f0d68a 0%, #d4af37 100%);
+    box-shadow: 0 15px 35px rgba(201, 169, 97, 0.6);
+    background: linear-gradient(135deg, #e0c68d 0%, #c9a961 100%);
+    border-color: #e0c68d;
 }
 
 button:active {
@@ -103,13 +107,13 @@ button a {
     color: inherit;
 }
 
-/* Контейнер игры */
+/* Spēles konteiners */
 #gameContainer {
     text-align: center;
     padding: 20px;
 }
 
-/* Меню */
+/* Izvēlne */
 .menu {
     background: rgba(20, 30, 60, 0.9);
     padding: 50px;
@@ -124,7 +128,7 @@ button a {
     margin-top: 0;
 }
 
-/* Правила игры */
+/* Spēles noteikumi */
 .rules {
     background: rgba(20, 30, 60, 0.9);
     padding: 40px;
@@ -167,7 +171,17 @@ button a {
     color: #d4af37;
 }
 
-/* Результаты */
+.author-credit {
+    text-align: center;
+    color: #c9a961;
+    font-size: 14px;
+    margin-top: 15px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Rezultāti */
 .results {
     background: rgba(20, 30, 60, 0.9);
     padding: 40px;
@@ -213,12 +227,12 @@ tr:last-child td {
     border-bottom: none;
 }
 
-/* Стиль для первой строки таблицы */
+/* Stils pirmajai tabulas rindai */
 tbody tr:first-child td {
     background: rgba(212, 175, 55, 0.05);
 }
 
-/* Адаптивность */
+/* Adaptīvums */
 @media (max-width: 768px) {
     h1 {
         font-size: 36px;

@@ -1,4 +1,4 @@
-// ===== REZULTĀTU PAGINA SCRIPT =====
+// ===== REZULTĀTU LAPAS SCRIPTS =====
 
 // Iegūst rezultātu tabulas body elementu
 const table = document.getElementById("resultsTable");
