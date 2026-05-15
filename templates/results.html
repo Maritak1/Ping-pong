@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Результаты</title>
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+<body>
+
+    <div class="results">
+
+        <h1>Результаты игр</h1>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Игра</th>
+                    <th>Левый игрок</th>
+                    <th>Правый игрок</th>
+                    <th>Победитель</th>
+                </tr>
+            </thead>
+
+            <tbody id="resultsTable">
+
+            </tbody>
+
+        </table>
+
+        <br>
+
+        <button onclick="clearResults()">
+            Очистить
+        </button>
+
+        <br><br>
+
+        <a href="/">
+            <button>Назад</button>
+        </a>
+
+    </div>
+
+    <script
+        src="{{ url_for('static', filename='results.js') }}"
+    ></script>
+
+</body>
+</html>
