@@ -1,50 +1,244 @@
-body {
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
-    background: #dddddd;
-    font-family: Arial;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    font-family: 'Georgia', 'Garamond', serif;
+    color: #f0f0f0;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 h1 {
-    margin-top: 20px;
+    font-size: 48px;
+    margin: 30px 0;
+    color: #d4af37;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* Форма ввода имён */
+#nameForm {
+    background: rgba(20, 30, 60, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #d4af37;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a2e;
+    font-size: 16px;
+    font-family: 'Georgia', serif;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    transform: scale(1.02);
+}
+
+input[type="text"]::placeholder {
+    color: #999;
 }
 
 canvas {
-    background: #00aa55;
-    border: 3px solid black;
+    background: linear-gradient(to bottom, #00aa55, #008844);
+    border: 3px solid #d4af37;
+    border-radius: 10px;
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
 }
 
+/* Кнопки */
 button {
-    padding: 15px 30px;
-    font-size: 20px;
+    padding: 15px 35px;
+    font-size: 18px;
+    font-family: 'Georgia', serif;
     cursor: pointer;
-    margin: 10px;
+    margin: 15px;
+    border: 2px solid #d4af37;
+    background: linear-gradient(135deg, #d4af37 0%, #aa8c23 100%);
+    color: #1a1a2e;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+    background: linear-gradient(135deg, #f0d68a 0%, #d4af37 100%);
+}
+
+button:active {
+    transform: translateY(-1px);
+}
+
+button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Контейнер игры */
+#gameContainer {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Меню */
 .menu {
-    margin-top: 150px;
+    background: rgba(20, 30, 60, 0.9);
+    padding: 50px;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    max-width: 600px;
+    margin: 80px auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
+.menu h1 {
+    margin-top: 0;
+}
+
+/* Правила игры */
+.rules {
+    background: rgba(20, 30, 60, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    max-width: 700px;
+    margin: 50px auto;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.rules h2 {
+    text-align: center;
+}
+
+.rules h3 {
+    color: #d4af37;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.rules-content p,
+.rules-content ul {
+    color: #f0f0f0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.rules-content ul {
+    padding-left: 25px;
+}
+
+.rules-content li {
+    margin-bottom: 8px;
+}
+
+.rules-content li strong {
+    color: #d4af37;
+}
+
+/* Результаты */
 .results {
-    margin-top: 50px;
+    background: rgba(20, 30, 60, 0.9);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    margin: 50px auto;
+    max-width: 900px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 table {
-    width: 70%;
-    margin: auto;
-    border-collapse: collapse;
-    background: white;
-}
-
-th,
-td {
-    border: 2px solid black;
-    padding: 15px;
-    font-size: 20px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: transparent;
+    margin-top: 20px;
 }
 
 th {
-    background: #00aa55;
-    color: white;
+    background: linear-gradient(135deg, #d4af37 0%, #aa8c23 100%);
+    color: #1a1a2e;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #d4af37;
+}
+
+td {
+    padding: 18px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    color: #f0f0f0;
+}
+
+tr:hover td {
+    background: rgba(212, 175, 55, 0.1);
+    transition: all 0.3s ease;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Стиль для первой строки таблицы */
+tbody tr:first-child td {
+    background: rgba(212, 175, 55, 0.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    input[type="text"] {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 12px;
+    }
 }

@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>Ping Pong Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Spēle</title>
 
     <link
         rel="stylesheet"
@@ -11,9 +12,27 @@
 </head>
 <body>
 
-    <h1>PING PONG</h1>
+    <h1>🎮 PING PONG SPĒLE 🎮</h1>
 
-    <canvas id="gameCanvas" width="1000" height="600"></canvas>
+    <!-- Форма для ввода имён -->
+    <div id="nameForm" style="text-align: center;">
+        <h2>Ievadi spēlētāju vārdus</h2>
+        <p style="color: #d4af37; font-size: 14px; margin-bottom: 20px;">💡 Pirmais, kas ieguva 10 punktus, uzvar!</p>
+        <input type="text" id="leftPlayerName" placeholder="1. spēlētāja vārds (W/S)" maxlength="20">
+        <input type="text" id="rightPlayerName" placeholder="2. spēlētāja vārds (↑/↓)" maxlength="20">
+        <button onclick="startGame()" style="margin-top: 20px;">▶ Sākt spēli</button>
+    </div>
+
+    <!-- Canvas игры -->
+    <div id="gameContainer" style="display: none;">
+        <div style="background: rgba(6, 4, 48, 0.8); padding: 20px; border-radius: 10px; display: inline-block; margin: 20px 0;">
+            <p style="font-size: 16px; color: #d4af37; margin: 0;">
+                W/S — 1. spēlētājs | ↑/↓ — 2. spēlētājs
+            </p>
+        </div>
+        
+        <canvas id="gameCanvas" width="700" height="300"></canvas>
+    </div>
 
     <script
         src="{{ url_for('static', filename='game.js') }}"

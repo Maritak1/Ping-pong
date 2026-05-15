@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>Ping Pong</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong Spēle</title>
 
     <link
         rel="stylesheet"
@@ -12,15 +13,41 @@
 <body>
 
     <div class="menu">
-        <h1>PING PONG</h1>
+        <h1>🎮 PING PONG 🎮</h1>
+        <p style="font-size: 18px; color: #d4af37; margin-bottom: 40px;">Klasiskā spēle, aktuāla visos laikos</p>
 
         <a href="/game">
-            <button>Играть</button>
+            <button>▶ Sākt spēli</button>
         </a>
 
         <a href="/results">
-            <button>Результаты</button>
+            <button>📊 Rezultāti</button>
         </a>
+    </div>
+
+    <!-- Правила игры -->
+    <div class="rules">
+        <h2>📋 Spēles noteikumi</h2>
+        
+        <div class="rules-content">
+            <h3>Mērķis:</h3>
+            <p>Pieņem bumbu ar savu raketi un nosūti to pāri viduslinijas pretiniekam. Pirmais, kas ieguva 10 punktus, uzvar spēli!</p>
+            
+            <h3>Vadības:</h3>
+            <ul>
+                <li><strong>1. spēlētājs:</strong> W — uz augšu, S — uz leju</li>
+                <li><strong>2. spēlētājs:</strong> ↑ — uz augšu, ↓ — uz leju</li>
+            </ul>
+            
+            <h3>Noteikumi:</h3>
+            <ul>
+                <li>Bumba atlec no augšas un apakšas</li>
+                <li>Ja bumba paiet caur raketi, pretiniekam piešķir punktu</li>
+                <li>Bumba ar katru raketes triecienu paātrinājas mazliet</li>
+                <li>Pirmais, kas ieņem 10 punktus, kļūst par uzvarētāju</li>
+                <li>Pēc spēles beigām vari apskatīt visus rezultātus</li>
+            </ul>
+        </div>
     </div>
 
 </body>

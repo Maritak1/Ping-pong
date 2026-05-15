@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="lv">
 <head>
     <meta charset="UTF-8">
-    <title>Результаты</title>
+    <title>Rezultāti</title>
 
     <link
         rel="stylesheet"
@@ -13,35 +13,37 @@
 
     <div class="results">
 
-        <h1>Результаты игр</h1>
+        <h1>📊 Spēļu rezultāti</h1>
 
         <table>
 
             <thead>
                 <tr>
-                    <th>Игра</th>
-                    <th>Левый игрок</th>
-                    <th>Правый игрок</th>
-                    <th>Победитель</th>
+                    <th>#</th>
+                    <th>1. spēlētājs</th>
+                    <th>2. spēlētājs</th>
+                    <th>🏆 Uzvarētājs</th>
                 </tr>
             </thead>
 
             <tbody id="resultsTable">
-
+                <tr style="text-align: center; color: #d4af37;">
+                    <td colspan="4">Spēļu vēl nav. Sāc pirmo!</td>
+                </tr>
             </tbody>
 
         </table>
 
-        <br>
+        <br><br>
 
-        <button onclick="clearResults()">
-            Очистить
+        <button onclick="clearResults()" style="background: linear-gradient(135deg, #d9534f 0%, #c9302c 100%); border-color: #d9534f;">
+            🗑️ Notīrīt rezultātus
         </button>
 
         <br><br>
 
         <a href="/">
-            <button>Назад</button>
+            <button>⬅️ Atpakaļ uz sākumu</button>
         </a>
 
     </div>
