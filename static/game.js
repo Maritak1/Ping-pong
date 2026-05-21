@@ -59,7 +59,7 @@ canvas.addEventListener("click", (e) => {
     }
 });
 
-// Taustiņš leju
+// Taustiņš uz leju
 window.addEventListener("keydown", (e) => {
     keys[e.code] = true;
 });
@@ -106,7 +106,7 @@ function startGame() {
     leftPlayerName = leftInput;
     rightPlayerName = rightInput;
 
-    // Inicializē canvas un raketes
+    //canvas un raketes
     ctx = canvas.getContext("2d");
     leftPaddleY = (canvas.height - paddleHeight) / 2;
     rightPaddleY = (canvas.height - paddleHeight) / 2;
@@ -137,13 +137,13 @@ function playHitSound() {
 
 // ===== ZĪMĒŠANA =====
 
-// Zīmē taisnstūri
+//taisnstūris
 function drawRect(x, y, w, h, color) {
     ctx.fillStyle = color;
     ctx.fillRect(x, y, w, h);
 }
 
-// Zīmē apli
+// aplis
 function drawCircle(x, y, r, color) {
     ctx.fillStyle = color;
     ctx.beginPath();
